@@ -31,14 +31,53 @@ body {
                 20px 30px 0px 1px #7A976B,
                 10px 20px 0px 1px #7A976B;
     position: absolute;
+    display: grid;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 .display {
+    display: flex;
+    flex-direction: column;
     background-color: #BBD0BF;
+    margin-top: 40px !important;
+    padding-top: 10px !important;
 }
 
 .btn {
-    background-color: #EBEBEB;
+    border-radius: 5px;
+    box-shadow: 0px 5px 0px 1px #171717;
+    height: 75px;
+    background-color: #FFFFFF;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.calc {
+    margin: 1rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+#main, #sub {
+    text-align: end;
+    margin: 0;
+    margin-right: 1rem;
+}
+
+#sub {
+    opacity: 0.5 !important;
+}
+
+#main {
+    font-size: 3.2rem;
 }
