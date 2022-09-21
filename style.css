@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    background-color: #99C089;
+}
+
+.container {
+    align-self: center;
+    background-color: #575757;
+    width: 500px;
+    height: 600px;
+    border-radius: 25px;
+    box-shadow: 0px 10px 0px 1px #424242,
+                200px 210px 0px 1px #7A976B,
+                190px 200px 0px 1px #7A976B,
+                180px 190px 0px 1px #7A976B,
+                170px 180px 0px 1px #7A976B,
+                160px 170px 0px 1px #7A976B,
+                150px 160px 0px 1px #7A976B,
+                140px 150px 0px 1px #7A976B,
+                130px 140px 0px 1px #7A976B,
+                120px 130px 0px 1px #7A976B,
+                110px 120px 0px 1px #7A976B,
+                100px 110px 0px 1px #7A976B,
+                90px 100px 0px 1px #7A976B,
+                80px 90px 0px 1px #7A976B,
+                70px 80px 0px 1px #7A976B,
+                60px 70px 0px 1px #7A976B,
+                50px 60px 0px 1px #7A976B,
+                40px 50px 0px 1px #7A976B,
+                30px 40px 0px 1px #7A976B,
+                20px 30px 0px 1px #7A976B,
+                10px 20px 0px 1px #7A976B;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.display {
+    background-color: #BBD0BF;
+}
+
+.btn {
+    background-color: #EBEBEB;
+}
