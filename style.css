@@ -1,15 +1,28 @@
 body {
     margin: 0;
     background-color: #99C089;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .container {
     align-self: center;
     background-color: #575757;
-    width: 500px;
+    width: 550px;
     height: 600px;
     border-radius: 25px;
     box-shadow: 0px 10px 0px 1px #424242,
+                320px 330px 0px 1px #7A976B,
+                310px 320px 0px 1px #7A976B,
+                300px 310px 0px 1px #7A976B,
+                290px 300px 0px 1px #7A976B,
+                280px 290px 0px 1px #7A976B,
+                270px 280px 0px 1px #7A976B,
+                260px 270px 0px 1px #7A976B,
+                250px 260px 0px 1px #7A976B,
+                240px 250px 0px 1px #7A976B,
+                230px 240px 0px 1px #7A976B,
+                220px 230px 0px 1px #7A976B,
+                210px 220px 0px 1px #7A976B,
                 200px 210px 0px 1px #7A976B,
                 190px 200px 0px 1px #7A976B,
                 180px 190px 0px 1px #7A976B,
@@ -40,8 +53,12 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #BBD0BF;
-    margin-top: 40px !important;
-    padding-top: 10px !important;
+    border-radius: 10px;
+    box-shadow: 0px 5px 0px 1px #A5B6AA,
+                0px -5px 0px 1px #A5B6AA;
+    margin: 50px 32px 30px 32px !important;
+    padding-top: 0 !important;
+    user-select: none;
 }
 
 .btn {
@@ -54,7 +71,17 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 1000 !important;
+    user-select: none;
+}
+
+.btn:active {
+    background-color: #C1C1C1;
+    box-shadow: 0px -2px 2px 1px #1e1e1e;
+}
+
+.btn:hover {
+    cursor: pointer;
 }
 
 .calc {
@@ -66,6 +93,7 @@ body {
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    margin: 0 32px;
 }
 
 #main, #sub {
@@ -80,4 +108,8 @@ body {
 
 #main {
     font-size: 3.2rem;
+}
+
+#equals {
+
 }
