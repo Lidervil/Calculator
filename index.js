@@ -23,7 +23,28 @@ var actNumber= '';
 var dispTop;
 var dispBot;
 
+zero.addEventListener('click', ()=> add('0'));
+one.addEventListener('click', ()=> add('1'));
+two.addEventListener('click', ()=> add('2'));
+three.addEventListener('click', ()=> add('3'));
+four.addEventListener('click', ()=> add('4'));
+five.addEventListener('click', ()=> add('5'));
+six.addEventListener('click', ()=> add('6'));
+seven.addEventListener('click', ()=> add('7'));
+eight.addEventListener('click', ()=> add('8'));
+nine.addEventListener('click', ()=> add('9'));
+point.addEventListener('click', ()=> add('.'));
+plus.addEventListener('click', ()=> operation('+'));
+minus.addEventListener('click', ()=> operation('-'));
+mult.addEventListener('click', ()=> operation('*'));
+divid.addEventListener('click', ()=> operation('/'));
+equals.addEventListener('click', ()=> equalit());
+
 function add(num) {
+    if (actNumber.length < 10) {
+        if (num === '0' && actNumber == '') {
+        return
+    }
     actNumber += num;
     let arrDisplay = '';
     for (let i=0; i<arr.length; i++) {
@@ -34,10 +55,13 @@ function add(num) {
     let display = arrDisplay+actNumber;
     main.innerHTML= actNumber;
     sub.innerHTML = display;
+    } 
 }
 
 function operation(type) {
-    arr.push(parseFloat(actNumber));
+    if (actNumber != '') {
+        arr.push(parseFloat(actNumber));
+    } 
     actNumber= '';
     main.innerHTML= '0';
     let length = arr.length;
@@ -63,11 +87,12 @@ function operation(type) {
     }
 }
 
-function equals() {
+function equalit() {
     if (actNumber != '') {
         arr.push(parseFloat(actNumber));
-    } else {
-    }
+    } 
+    let length = arr.length;
+    let operNumber;
     if (length < 3) {
         if (arr[0] != undefined) {
             main.innerHTML=arr[0];
@@ -88,7 +113,11 @@ function equals() {
         main.innerHTML= operNumber;
     }
     arr = [];
+    actNumber = '';
 }
+
+
+
 
 /*
 number 1+number 2+ number3 +number4
