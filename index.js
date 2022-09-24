@@ -20,6 +20,7 @@ console.log(main)
 
 var arr = []
 var actNumber= '';
+var operationCount;
 var dispTop;
 var dispBot;
 
@@ -61,7 +62,9 @@ function add(num) {
 function operation(type) {
     if (actNumber != '') {
         arr.push(parseFloat(actNumber));
-    } 
+    } else {
+        arr.push(0);
+    }
     actNumber= '';
     main.innerHTML= '0';
     let length = arr.length;
@@ -70,10 +73,12 @@ function operation(type) {
         arr.push(type);
     } else if (arr[length-2] == '/') {
         operNumber = arr[length-3] / arr[length-1];
+        operNumber = Math.round((operNumber + Number.EPSILON) * 100) / 100;
         arr = [operNumber,type];
         main.innerHTML= operNumber;
     } else if (arr[length-2] == '*') {
         operNumber = arr[length-3] * arr[length-1];
+        operNumber = Math.round((operNumber + Number.EPSILON) * 100) / 100;
         arr = [operNumber,type];
         main.innerHTML= operNumber;
     } else if (arr[length-2] == '-') {
@@ -101,9 +106,11 @@ function equalit() {
         }
     } else if (arr[length-2] == '/') {
         operNumber = arr[length-3] / arr[length-1];
+        operNumber = Math.round((operNumber + Number.EPSILON) * 100) / 100;
         main.innerHTML= operNumber;
     } else if (arr[length-2] == '*') {
         operNumber = arr[length-3] * arr[length-1];
+        operNumber = Math.round((operNumber + Number.EPSILON) * 100) / 100;
         main.innerHTML= operNumber;
     } else if (arr[length-2] == '-') {
         operNumber = arr[length-3] - arr[length-1];

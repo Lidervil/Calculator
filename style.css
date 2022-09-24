@@ -73,6 +73,7 @@ body {
     font-size: 3rem;
     font-weight: 1000 !important;
     user-select: none;
+    transition: all 300ms ease;
 }
 
 .btn:active {
@@ -111,5 +112,5 @@ body {
 }
 
 #equals {
-
+    background-color: rgb(255, 157, 0);
 }
